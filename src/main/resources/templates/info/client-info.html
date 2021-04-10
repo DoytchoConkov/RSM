@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:include="~{fragments/head}"></th:block>
+
+<body>
+
+<th:block th:include="~{fragments/nav-bar}"></th:block>
+
+<main>
+    <div class="container">
+        <h2 class="text-center text-white">Client orders info.</h2>
+        <div class="div-form mx-auto col-md-8 d-flex flex-column justify-content-center">
+            <div class="form-group">
+                <label class="text-white font-weight-bold" for="clientNamesAndPhoneNumbers">Enter Part of Client Name or
+                    Phone
+                    Number: </label>
+                <input id="clientNamesAndPhoneNumbers" type="text" name="clientNamesAndPhoneNumbers"
+                       style="width: 300px" placeholder="Enter name or phone number">
+            </div>
+            <div id="tooMany" class="alert alert-danger" role="alert" style="display: none">
+                Too many results found.
+            </div>
+            <table class="table-striped table-dark" id="table" style="display: none">
+                <thead>
+                <tr>
+                    <td>Brand</td>
+                    <td>Model</td>
+                    <td>Serial Number</td>
+                    <td>Damage</td>
+                    <td>Receive Date</td>
+                    <td>Leave Date</td>
+                    <td>TotalPrice</td>
+                </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
+<th:block th:include=" ~{fragments/footer}"></th:block>
+</body>
+<script src="/js/findClient.js" type="text/javascript"></script>
+<!--<script>autocomplete(document.getElementById("clientNamesAndPhoneNumbers"));</script>-->
+</html>

@@ -1,0 +1,142 @@
+plugins {
+    id 'org.springframework.boot' version '2.4.4'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'bg.dtc'
+version = 'v1.0'
+sourceCompatibility = '11'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+//    <dependencies>
+//            <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-actuator</artifactId>
+//            </dependency>
+//        <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//    <artifactId>spring-boot-starter-data-jpa</artifactId>
+//            <version>LATEST</version>
+//            </dependency>
+//        <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//    <artifactId>spring-boot-starter-thymeleaf</artifactId>
+//        </dependency>
+//            <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-web</artifactId>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-devtools</artifactId>
+//            <scope>runtime</scope>
+//    </dependency>
+//        <dependency>
+//            <groupId>mysql</groupId>
+//            <artifactId>mysql-connector-java</artifactId>
+//            <scope>runtime</scope>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-tomcat</artifactId>
+//            <scope>provided</scope>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-test</artifactId>
+//            <scope>test</scope>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.springframework.security</groupId>
+//            <artifactId>spring-security-test</artifactId>
+//            <scope>test</scope>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.modelmapper</groupId>
+//            <artifactId>modelmapper</artifactId>
+//            <version>2.3.0</version>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.thymeleaf.extras</groupId>
+//            <artifactId>thymeleaf-extras-springsecurity5</artifactId>
+//            <version>3.0.4.RELEASE</version>
+//    </dependency>
+//        <dependency>
+//            <groupId>javax.validation</groupId>
+//            <artifactId>validation-api</artifactId>
+//            <version>2.0.0.Final</version>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.hibernate.validator</groupId>
+//            <artifactId>hibernate-validator</artifactId>
+//            <version>6.0.2.Final</version>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.hibernate.validator</groupId>
+//            <artifactId>hibernate-validator-annotation-processor</artifactId>
+//            <version>6.0.2.Final</version>
+//    </dependency>
+//        <dependency>
+//            <groupId>org.springframework.security</groupId>
+//            <artifactId>spring-security-core</artifactId>
+//        </dependency>
+//    <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-security</artifactId>
+//            </dependency>
+//        <dependency>
+//            <groupId>com.cloudinary</groupId>
+//    <artifactId>cloudinary</artifactId>
+//            <version>1.0.2</version>
+//            </dependency>
+//        <dependency>
+//            <groupId>com.h2database</groupId>
+//    <artifactId>h2</artifactId>
+//            <version>1.4.200</version>
+//            <scope>test</scope>
+//        </dependency>
+//    <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-configuration-processor</artifactId>
+//            <optional>true</optional>
+//        </dependency>
+//    <dependency>
+//            <groupId>org.springframework.boot</groupId>
+//            <artifactId>spring-boot-starter-aop</artifactId>
+//            <version>2.4.3</version>
+//        </dependency>
+//            </dependencies>
+
+
+
+
+
+
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'org.postgresql:postgresql'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+    useJUnitPlatform()
+}
