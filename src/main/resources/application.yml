@@ -7,9 +7,9 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: ${JDBC_DATABASE_PASSWORD:}
+    password: topSecret_1
     url: ${JDBC_DATABASE_URL:}
-    username: ${JDBC_DATABASE_USERNAME:}
+    username: root
     hikari:
       connection-timeout: 30000
       maximum-pool-size: 10
@@ -22,7 +22,7 @@ spring:
       filter:
         enabled: true
   jpa:
-    database-platform: ${SPRING_JPA_DATABASE-PLATFORM:}
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
     hibernate:
       ddl-auto: update
     open-in-view: false
