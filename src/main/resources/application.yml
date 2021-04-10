@@ -7,20 +7,30 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    hikari:
-      connection-timeout: 30000
-      maximum-pool-size: 10
     password: ${JDBC_DATABASE_PASSWORD:}
     url: ${JDBC_DATABASE_URL:}
     username: ${JDBC_DATABASE_USERNAME:}
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+  servlet:
+    multipart:
+      max-file-size: 1MB
+      max-request-size: 5MB
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
   jpa:
     database-platform: ${SPRING_JPA_DATABASE-PLATFORM:}
     hibernate:
       ddl-auto: update
+    open-in-view: false
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-  servlet:
+        format_sql: true
+
     multipart:
       enabled: true
       max-file-size: 5MB
