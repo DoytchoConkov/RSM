@@ -37,7 +37,7 @@ class UserServiceDBTest {
         user.setUsername("Gosho");
         user.setPassword("12345");
         UserRole roleUser = new UserRole();
-        roleUser.setRole(RoleName.USER);
+        roleUser.setRole(RoleName.FRONT_OFFICE);
         UserRole roleAdmin = new UserRole();
         roleAdmin.setRole(RoleName.ADMIN);
         user.setRoles(Set.of(roleUser, roleAdmin));
@@ -52,6 +52,5 @@ class UserServiceDBTest {
                 map(GrantedAuthority::getAuthority).
                 collect(Collectors.toList());
         Assertions.assertTrue(authorities.contains("ROLE_ADMIN"));
-        Assertions.assertTrue(authorities.contains("ROLE_USER"));
     }
 }
