@@ -1,0 +1,28 @@
+
+server:
+  port: ${PORT:8080}
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 10
+    password: ${JDBC_DATABASE_PASSWORD:}
+    url: ${JDBC_DATABASE_URL:}
+    username: ${JDBC_DATABASE_USERNAME:}
+  jpa:
+    database-platform: ${SPRING_JPA_DATABASE-PLATFORM:}
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        cloudinary:
+          api-key: 532389729736197
+          api-secret: ${CLOUDINARY_SECRET}
+          cloud-name: dislhsmj5
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 5MB
