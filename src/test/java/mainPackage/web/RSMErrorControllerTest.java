@@ -21,7 +21,7 @@ class RSMErrorControllerTest {
         RSMErrorController rsmErrorController = new RSMErrorController();
         Mockito.when(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE))
                 .thenReturn(404);
-   //     Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-404");
+        Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-404");
 
 
     }
@@ -31,7 +31,7 @@ class RSMErrorControllerTest {
         RSMErrorController rsmErrorController = new RSMErrorController();
         Mockito.when(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE))
                 .thenReturn(403);
-    //    Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-403");
+        Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-403");
 
 
     }
@@ -40,7 +40,7 @@ class RSMErrorControllerTest {
     public void returnsView500ForAnyOtherError() throws Exception {
         RSMErrorController rsmErrorController = new RSMErrorController();
         Mockito.when(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE)).thenReturn(400);
-  //      Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-page");
+        Assert.assertEquals(rsmErrorController.handleError(request), "errors/error-page");
     }
     @Test
     public void getErrorPath() throws Exception {
