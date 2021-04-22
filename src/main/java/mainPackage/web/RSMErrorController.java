@@ -10,11 +10,11 @@ import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class RSMErrorController implements ErrorController {
-//    @Override
-//    public String getErrorPath() {
-//        return "/error";
-//    }
-//
+    @Override
+    public String getErrorPath() {
+        return "/error";
+    }
+
 //    @RequestMapping("/error")
 //    public String handleError(HttpServletRequest request) {
 //        Object status =
