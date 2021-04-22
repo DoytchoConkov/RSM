@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>eu.doytcho</groupId>
-    <artifactId>main</artifactId>
+    <artifactId>RepairShopManager</artifactId>
     <version>v1.0</version>
     <name>RepairShopManager</name>
     <description>Final project in SoftUni</description>
