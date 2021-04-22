@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
-//
-//@Controller
-//public class RSMErrorController implements ErrorController {
+
+@Controller
+public class RSMErrorController implements ErrorController {
 //    @Override
 //    public String getErrorPath() {
 //        return "/error";
@@ -33,5 +33,5 @@ import javax.servlet.http.HttpServletRequest;
 //        }
 //        return "errors/error-page";
 //    }
-//}
+}
 
